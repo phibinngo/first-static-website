@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Bài Tập 1</title>
+    <style>
+        p{
+            color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <form action="" class="was-validated">
+            <div class="mb-3 mt-3">
+                <div>
+                    <label for="fullname" class="form-label">Full Name:</label>
+                    <br>
+                    <input type="text" id="fullname" placeholder="Enter your full name" name="fullname" required>
+                    <p id="demo"></p>
+                </div>
+                <div>
+                    <label for="age" class="form-label">Age:</label>
+                    <br>
+                    <input type="text"  id="age" placeholder="Enter your Age" name="age" required>
+                    <p id="demo1"></p>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div>
+                    <label for="username" class="form-label">Username:</label>
+                    <br>
+                    <input type="text"  id="username" placeholder="Enter your Username" name="username" required>
+                    <p id="demo2"></p>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="pwd" class="form-label">Password:</label>
+                <br>
+                <input type="password"   id="pwd" placeholder="Enter your password" name="pswd" required>
+                <p id="demo3"></p>
+            </div>
+        </form>
+        <button onclick="check()">ĐĂNG KÝ</button>
+    </div>
+
+    <script>
+
+
+        function checkUsername() {
+            let x = document.getElementById("username").value;
+            let text = (x.length < 3 || x.length > 10) ? "Username từ 3-10 ký tự" : "Okie";
+            document.getElementById("demo2").innerText = text;
+        }
+
+        function checkAge() {
+            let x = document.getElementById("age").value;
+            let text;
+            if( x === ""){
+                text ="Dữ liệu không được để trống!";
+            }
+            else if (isNaN(x)) {
+                text = "Vui lòng nhập số!";
+            } else if (x < 18) {
+                text = "Tuổi phải trên 18!";
+            } else {
+                text = "Okie";
+            }
+            document.getElementById("demo1").innerText = text;
+        }
+        function checkfullname() {
+            let x = document.getElementById("fullname").value;
+            let text = (x ==="") ? "Dữ liệu không được để trống!" : "Okie";
+            document.getElementById("demo").innerText = text;
+        }
+        function checkpassword() {
+            let x = document.getElementById("pwd").value;
+            let text = (x === "") ? "Dữ liệu không được để trống!" : "Okie";
+            document.getElementById("demo3").innerText = text;
+        }
+
+        function check() {
+            checkUsername();
+            checkAge();
+            checkfullname();
+            checkpassword();
+        }
+    </script>
+</body>
+
+</html>

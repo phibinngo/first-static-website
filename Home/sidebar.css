@@ -1,0 +1,119 @@
+.wrap-sidebar{
+    background: #2c3e50;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+}
+.sidebar {
+
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.nav-link {
+    color: #ecf0f1;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-link:hover {
+    background: #34495e;
+}
+
+.wrap-sidebar {
+      background-color: #2c3e50;
+      color: white;
+      min-height: 100vh;
+      padding-top: 1rem;
+    }
+
+    .sidebar .nav-link {
+      color: white;
+    }
+
+    .sidebar .nav-link:hover {
+      background-color: #34495e;
+    }
+
+    /* Hamburger button */
+    .hamburger-menu {
+      display: none;
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      width: 44px;
+      height: 44px;
+      background: #2c3e50;
+      border-radius: 8px;
+      z-index: 1060;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .hamburger-menu span,
+    .hamburger-menu span::before,
+    .hamburger-menu span::after {
+      display: block;
+      background: white;
+      height: 3px;
+      width: 24px;
+      border-radius: 2px;
+      position: relative;
+    }
+
+    .hamburger-menu span::before,
+    .hamburger-menu span::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+    .hamburger-menu span::before { top: -8px; }
+    .hamburger-menu span::after { top: 8px; }
+
+    /* Dropdown menu (mobile) */
+    .dropdown-menu-mobile {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 16px;
+      background: #2c3e50;
+      color: white;
+      border-radius: 8px;
+      padding: 10px 0;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 1060;
+    }
+
+    .dropdown-menu-mobile a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+
+    .dropdown-menu-mobile a:hover {
+      background-color: #34495e;
+    }
+
+    @media (max-width: 780px) {
+      .wrap-sidebar {
+        display: none !important;
+      }
+      .hamburger-menu {
+        display: flex;
+      }
+      .main {
+        padding-left: 16px;
+      }
+    }
